@@ -84,7 +84,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Langue/Langue1
+    path: Body/Langue/Langue1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -154,7 +154,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Langue/Langue2
+    path: Body/Langue/Langue2
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -224,7 +224,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Langue/Langue3
+    path: Body/Langue/Langue3
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -294,7 +294,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Langue/Langue4
+    path: Body/Langue/Langue4
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -364,7 +364,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Langue/Langue5
+    path: Body/Langue/Langue5
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves: []
@@ -376,7 +376,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 742533799
+      path: 3510906091
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -385,7 +385,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3041622813
+      path: 1213037905
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -394,7 +394,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 3259779979
+      path: 1061834183
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -403,7 +403,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1546182184
+      path: 2704201828
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -412,7 +412,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 724561598
+      path: 3593070834
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -513,7 +513,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Langue/Langue1
+    path: Body/Langue/Langue1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -588,7 +588,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Langue/Langue1
+    path: Body/Langue/Langue1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -663,7 +663,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Langue/Langue1
+    path: Body/Langue/Langue1
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -738,7 +738,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Langue/Langue2
+    path: Body/Langue/Langue2
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -813,7 +813,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Langue/Langue2
+    path: Body/Langue/Langue2
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -888,7 +888,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Langue/Langue2
+    path: Body/Langue/Langue2
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -963,7 +963,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Langue/Langue3
+    path: Body/Langue/Langue3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1038,7 +1038,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Langue/Langue3
+    path: Body/Langue/Langue3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1113,7 +1113,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Langue/Langue3
+    path: Body/Langue/Langue3
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1188,7 +1188,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Langue/Langue4
+    path: Body/Langue/Langue4
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1263,7 +1263,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Langue/Langue4
+    path: Body/Langue/Langue4
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1338,7 +1338,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Langue/Langue4
+    path: Body/Langue/Langue4
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1413,7 +1413,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Langue/Langue5
+    path: Body/Langue/Langue5
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1488,7 +1488,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Langue/Langue5
+    path: Body/Langue/Langue5
     classID: 4
     script: {fileID: 0}
     flags: 0
@@ -1563,7 +1563,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Langue/Langue5
+    path: Body/Langue/Langue5
     classID: 4
     script: {fileID: 0}
     flags: 0
