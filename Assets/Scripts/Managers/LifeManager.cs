@@ -40,4 +40,10 @@ public class LifeManager : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+
+    public void AddLife(int amount)
+    {
+        life += amount;
+        UpdateLifeText();
+    }
 }

@@ -11,6 +11,11 @@ public class ScoreManager : MonoBehaviour
     private int enemySpawnCount = 0;
     private const int maxEnemies = 32;
 
+    private LifeManager lifeManager;
+    private int addLifeOne = 100;
+    private int addLifeTwo = 200;
+    private int addLifeThree = 300;
+
     void Awake()
     {
         if (Instance == null)
@@ -25,12 +30,25 @@ public class ScoreManager : MonoBehaviour
 
     void Start()
     {
+        lifeManager = FindObjectOfType<LifeManager>();
         UpdateScoreText();
     }
 
     public void AddScore(int amount)
     {
         score += amount;
+        if (score == addLifeOne)
+        {
+            lifeManager.AddLife(10);
+        }
+        if (score == addLifeTwo)
+        {
+            lifeManager.AddLife(10);
+        }
+        if (score == addLifeThree)
+        {
+            lifeManager.AddLife(10);
+        }
         UpdateScoreText();
     }
 
