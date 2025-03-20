@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4728814473714004133}
   - component: {fileID: 8487010388855700503}
   - component: {fileID: 39978045127554395}
+  - component: {fileID: 1793546871431008971}
   m_Layer: 0
   m_Name: Foutrmi grosse
   m_TagString: Enemy
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: -111.772285, z: 0}
 --- !u!212 &8821273826915419052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -175,3 +176,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!111 &1793546871431008971
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387898869918519694}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: f3aa9a1b6a59b804ba34e641d00645b0, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: f3aa9a1b6a59b804ba34e641d00645b0, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
