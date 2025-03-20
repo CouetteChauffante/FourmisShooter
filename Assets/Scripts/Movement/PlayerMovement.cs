@@ -22,24 +22,17 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         fHorizontal =Input.GetAxisRaw("Horizontal") ;
-       
+        Attack();
     }
     void FixedUpdate()
     {
         rb.velocity = new Vector2(fHorizontal * fSpeed, rb.velocity.y);
-        Attack();
     }
     
     private void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("Attack");
-            animator.Play("Attack");
-            
-            
-
-        }
-        
-
+        if (!Input.GetKeyDown(KeyCode.Space)) return;
+        Debug.Log("Attack");
+        animator.Play("Attack");
     }
 }
