@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 5533002138458851836}
   - component: {fileID: 2117497332649180690}
   - component: {fileID: 6974297617557833143}
-  - component: {fileID: 6912679827493287148}
+  - component: {fileID: 506302201295864325}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -310,7 +310,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6912679827493287148
+--- !u!114 &506302201295864325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -319,9 +319,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4934220835625682048}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f075e02516c126b4a99eebd9fe07cedb, type: 3}
+  m_Script: {fileID: 11500000, guid: c2807e4dbaa67544bba994e22417b8c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loadButton: {fileID: 6974297617557833143}
+  sceneName: MainMenu
 --- !u!1 &8304856760731867736
 GameObject:
   m_ObjectHideFlags: 0
