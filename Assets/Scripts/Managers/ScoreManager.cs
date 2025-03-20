@@ -1,9 +1,9 @@
 using UnityEngine;
-using TMPro; // For TextMeshPro
+using TMPro;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText; // Reference to the TextMeshProUGUI component
+    public TextMeshProUGUI scoreText;
     private int score = 0;
 
     void Start()
