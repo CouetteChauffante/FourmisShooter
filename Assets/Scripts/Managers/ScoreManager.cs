@@ -1,7 +1,7 @@
 using UnityEngine;
 using TMPro; // For TextMeshPro
 
-public class IncreaseScoreOnKey : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText; // Reference to the TextMeshProUGUI component
     private int score = 0;
@@ -30,4 +30,12 @@ public class IncreaseScoreOnKey : MonoBehaviour
     {
         scoreText.text = "Score: " + score.ToString("0000");
     }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+        
+        UpdateScoreText();
+    }
+    
 }
