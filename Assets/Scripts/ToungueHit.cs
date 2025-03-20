@@ -6,15 +6,15 @@ public class TongueHit : MonoBehaviour
 
     private void Start()
     {
-        scoreManager = FindObjectOfType<ScoreManager>(); // Finds the ScoreManager in the scene
+        scoreManager = FindObjectOfType<ScoreManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Enemy")) // Assuming all ants have the "Ant" tag
+        if (other.CompareTag("Enemy"))
         {
-            scoreManager.AddScore(10); // Call the existing score function
-            Destroy(other.gameObject); // Destroy the ant
+            scoreManager.AddScore(10);
+            Destroy(other.gameObject);
         }
     }
 }
