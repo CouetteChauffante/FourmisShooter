@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 
 public class LifeManager : MonoBehaviour
 {
-    public TextMeshProUGUI lifeText; // Reference to the TextMeshProUGUI component
+    public TextMeshProUGUI lifeText;
     private int life = 90;
-    private int lifeTotal = 100;
+    private int maxLife = 99;
 
     void Start()
     {
@@ -17,33 +17,27 @@ public class LifeManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.U))
         {
-            DecreaseLife();
+            RemoveLife(10);
         }
-    }
-
-    void DecreaseLife()
-    {
-        life -= 10;
-
-        UpdateLifeText();
-    }
-
-    void UpdateLifeText()
-    {
-        lifeText.text = "Vie: " + life.ToString("00");
-        lifeTotal -= 10;
-        Debug.Log("Vie = "+lifeTotal);
-        if (lifeTotal == 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-
     }
 
     public void RemoveLife(int amount)
     {
         life -= amount;
-        
+        if (life < 0) life = 0;
         UpdateLifeText();
+    }
+
+    void UpdateLifeText()
+    {
+        string displayedLife = (life > maxLife) ? "+99" : life.ToString("00");
+        lifeText.text = "Vie: " + displayedLife;
+
+        Debug.Log("Vie = " + life);
+
+        if (life == 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 }

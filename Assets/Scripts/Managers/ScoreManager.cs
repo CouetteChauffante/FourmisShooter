@@ -1,28 +1,36 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
+    public static ScoreManager Instance { get; private set; }
+
     public TextMeshProUGUI scoreText;
     private int score = 0;
+    private int enemySpawnCount = 0;
+    private const int maxEnemies = 32;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
         UpdateScoreText();
     }
 
-    void Update()
+    public void AddScore(int amount)
     {
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            IncreaseScore();
-        }
-    }
-
-    void IncreaseScore()
-    {
-        score += 10;
-
+        score += amount;
         UpdateScoreText();
     }
 
@@ -31,11 +39,12 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString("0000");
     }
 
-    public void AddScore(int amount)
+    public void RegisterSpawn()
     {
-        score += amount;
-        
-        UpdateScoreText();
+        enemySpawnCount++;
+        if (enemySpawnCount >= maxEnemies)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
     }
-    
 }

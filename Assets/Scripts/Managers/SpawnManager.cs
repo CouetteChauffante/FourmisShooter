@@ -2,20 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnerManager : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
-    public List<GameObject> enemies; // List to hold enemy prefabs
-    public Transform spawnZone; // Parent object defining spawn area
+    public List<GameObject> enemies;
+    public Transform spawnZone;
     public float spawnIntervalMin = 2f;
     public float spawnIntervalMax = 5f;
-    
-    public List<GameObject> decor; // List to hold enemy prefabs
-    public Transform decorSpawnZone; // Parent object defining spawn area
+
+    public List<GameObject> decor;
+    public Transform decorSpawnZone;
     public float decorSpawnIntervalMin = 0.5f;
     public float decorSpawnIntervalMax = 2f;
-    
+
     private float minX, maxX, spawnY;
-    
     private float decorMinX, decorMaxX, decorSpawnY;
 
     void Start()
@@ -26,7 +25,6 @@ public class SpawnerManager : MonoBehaviour
             return;
         }
 
-        // Determine spawn zone boundaries
         Collider2D zoneCollider = spawnZone.GetComponent<Collider2D>();
         if (zoneCollider == null)
         {
@@ -36,18 +34,16 @@ public class SpawnerManager : MonoBehaviour
 
         minX = zoneCollider.bounds.min.x;
         maxX = zoneCollider.bounds.max.x;
-        spawnY = zoneCollider.bounds.center.y; // Enemies spawn at zone's center Y
+        spawnY = zoneCollider.bounds.center.y;
 
         StartCoroutine(SpawnEnemies());
-        
-        
+
         if (decor.Count == 0 || decorSpawnZone == null)
         {
-            Debug.LogError("Enemies list is empty or SpawnZone is not assigned!");
+            Debug.LogError("Decor list is empty or DecorSpawnZone is not assigned!");
             return;
         }
 
-        // Determine spawn zone boundaries
         Collider2D decorZoneCollider = decorSpawnZone.GetComponent<Collider2D>();
         if (decorZoneCollider == null)
         {
@@ -57,7 +53,7 @@ public class SpawnerManager : MonoBehaviour
 
         decorMinX = decorZoneCollider.bounds.min.x;
         decorMaxX = decorZoneCollider.bounds.max.x;
-        decorSpawnY = decorZoneCollider.bounds.center.y; // Enemies spawn at zone's center Y
+        decorSpawnY = decorZoneCollider.bounds.center.y;
 
         StartCoroutine(SpawnDecors());
     }
@@ -73,13 +69,19 @@ public class SpawnerManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        if (decor.Count == 0) return;
-        
+        if (enemies.Count == 0) return;
+
         Vector2 spawnPosition = new Vector2(Random.Range(minX, maxX), spawnY);
         GameObject enemyPrefab = enemies[Random.Range(0, enemies.Count)];
         Instantiate(enemyPrefab, spawnPosition, Quaternion.Euler(180, 0, 0));
+
+        // Notify ScoreManager that an enemy has spawned
+        if (ScoreManager.Instance != null)
+        {
+            ScoreManager.Instance.RegisterSpawn();
+        }
     }
-    
+
     IEnumerator SpawnDecors()
     {
         while (true)
@@ -92,9 +94,16 @@ public class SpawnerManager : MonoBehaviour
     void SpawnDecor()
     {
         if (decor.Count == 0) return;
-        
+
         Vector2 decorSpawnPosition = new Vector2(Random.Range(decorMinX, decorMaxX), decorSpawnY);
         GameObject decorPrefab = decor[Random.Range(0, decor.Count)];
-        Instantiate(decorPrefab, decorSpawnPosition, Quaternion.identity);
+        GameObject decorInstance = Instantiate(decorPrefab, decorSpawnPosition, Quaternion.identity);
+
+        // Ensure decor is behind everything by adjusting sorting order
+        SpriteRenderer decorRenderer = decorInstance.GetComponent<SpriteRenderer>();
+        if (decorRenderer != null)
+        {
+            decorRenderer.sortingOrder = -10;
+        }
     }
 }
